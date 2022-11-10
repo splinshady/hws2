@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import s from './HW11.module.css'
 import s2 from '../../s1-main/App.module.css'
-import { restoreState } from '../hw06/localStorage/localStorage'
+import {restoreState} from '../hw06/localStorage/localStorage'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 
 /*
@@ -29,16 +29,19 @@ function HW11() {
                         <span id={'hw11-value'} className={s.number}>{value1}</span>
                         <SuperRange
                             id={'hw11-single-slider'}
-                            // сделать так чтоб value1 изменялось // пишет студент
-
+                            value1={value1}
+                            value2={value2}
+                            setValue1={setValue1}
                         />
                     </div>
                     <div className={s.wrapper}>
                         <span id={'hw11-value-1'} className={s.number}>{value1}</span>
                         <SuperRange
                             id={'hw11-double-slider'}
-                            // сделать так чтоб value1/2 изменялось // пишет студент
-
+                            value1={value1}
+                            value2={value2}
+                            setValue1={setValue1}
+                            setValue2={setValue2}
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
                     </div>

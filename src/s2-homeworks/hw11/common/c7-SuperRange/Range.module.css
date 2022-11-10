@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+}
+
+.slider {
+    position: relative;
+    width: 147px;
+}
+
+.slider__track,
+.slider__range{
+    position: absolute;
+    top: -3px
+}
+
+.slider__track,
+.slider__range {
+    border-radius: 3px;
+    height: 5px;
+}
+
+.slider__track {
+    background-color: #8B8B8B;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider__range {
+    background-color: #00CC22;
+    z-index: 2;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 147px;
+    outline: none;
+}
+
+.thumb__left::-webkit-slider-thumb {
+    pointer-events: all;
+    z-index: 3;
+}
+
+.thumb__right::-webkit-slider-thumb {
+    pointer-events: all;
+    z-index: 4;
+}
+
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+    background-color: #00CC22;
+    border: solid 6px white;
+    outline: solid 1px #00CC22;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+    background-color: #00CC22;
+    border: solid 6px white;
+    outline: solid 1px #00CC22;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    box-sizing: border-box;
+}
