@@ -20,8 +20,6 @@ const SuperRange: React.FC<SuperRangePropsType> = ({value1, setValue1, setValue2
                 range.current.style.left = `${value1}%`
                 range.current.style.width = `${value2 - value1}%`
             } else {
-                console.log(range.current.style.left)
-                console.log(range.current.style.width)
                 range.current.style.left = `${0}%`
             }
         }

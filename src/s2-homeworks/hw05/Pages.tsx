@@ -4,6 +4,7 @@ import Error404 from './pages/Error404'
 import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
 import JuniorPlus from './pages/JuniorPlus'
+import style from './HW5.module.css'
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -13,7 +14,7 @@ export const PATH = {
 
 function Pages() {
     return (
-        <div>
+        <div className={style.container}>
             <Routes>
 
                 <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
